@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bariaesthetic</title>
+  <link rel="stylesheet" href="css/styles.css">
+  </head>
+<body>
+  <!-- Header con Navbar -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="nav-content">
+        <!-- Logo -->
+        <a href="/" class="logo-link">BARIAESTHETIC</a>
+
+        <!-- Menú -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#inicio" class="nav-link active">INICIO</a></li>
+          <li><a href="index.html" class="nav-link">NOSOTROS</a></li>
+          <li><a href="servicios.html" class="nav-link">SERVICIOS BARIÁTRICA</a></li>
+          <li><a href="comentarios.html" class="nav-link">TESTIMONIOS</a></li>
+          <li><a href="contactanos.html"  class="nav-link">CONTACTOS</a></li>
+          <li><a href="#tienda" class="nav-link tienda-btn">TIENDA ONLINE</a></li>
+        </ul>
+
+        <!-- Botón móvil -->
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Abrir menú">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-team-section" id="inicio">
+      <div class="hero-team-container">
+        <img 
+          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+          alt="Equipo médico de la clínica Bariaesthetic" 
+          class="team-bg-img" 
+        />
+        <div class="hero-team-content">
+          <div class="team-text">
+            <h1 class="team-section-title">Nosotros</h1>
+            <p class="team-section-subtitle">Te acompañamos a lograr tu mejor versión</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="nosotros">
+      <div class="about-container">
+        <div class="about-image">
+          <span>FOTO DE LOCAL Y PERSONAL</span>
+        </div>
+        <div class="about-content">
+          <h2>Clínica Bariaesthetic</h2>
+          <p>
+            Nos enfocamos en brindar a cada paciente una atención personalizada,
+            adaptando nuestros tratamientos a sus necesidades reales y objetivos específicos. 
+            Combinamos la experiencia médica con un enfoque humano e integral, priorizando la 
+            salud, la seguridad y la belleza de manera equilibrada.
+          </p>
+          <p>
+            En nuestra clínica, cada persona es única y por eso diseñamos planes hechos a medida
+            que potencian su bienestar físico y emocional. Descubre en Bariaesthetic un espacio
+            donde la transformación es posible y la confianza se renueva.
+          </p>
+          <p><strong>¡Te invitamos a alcanzar tu mejor versión!</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+      <div class="philosophy-container">
+        <p class="philosophy-title">
+          Entendemos que cada paciente es único. Por ello, a través de nuestra atención personalizada y tecnología de vanguardia, buscamos:
+        </p>
+        
+        <div class="philosophy-content">
+          <div class="philosophy-text">
+            <h3 class="philosophy-subtitle">
+              Acompañar a cada persona en su camino hacia la mejor versión de sí misma:
+            </h3>
+            <p class="philosophy-description">
+              Sabemos que cada persona es y tiene una belleza única, con objetivos y necesidades propias. Por eso, ofrecemos una atención personalizada y opciones de tratamiento de última generación adaptadas a tus necesidades específicas.
+            </p>
+          </div>
+          
+          <div class="philosophy-image">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pacientes en consulta" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors-section" id="equipo">
+      <div class="doctors-container">
+        <h2 class="doctors-title">Conoce nuestro equipo médico</h2>
+        <p class="doctors-subtitle">
+          Nuestro equipo de médicos cuenta con amplia experiencia y formación en las 
+          últimas técnicas de medicina estética. Estamos comprometidos en ofrecerte 
+          atención personalizada para acompañarte a lograr la mejor versión de ti 
+          misma.
+        </p>
+
+        <!-- Search Section -->
+        <div class="search-section">
+          <h3 class="search-title">BUSCA TU MÉDICO</h3>
+          <div class="search-form">
+            <select id="sede">
+              <option>Sede Magdalena</option>
+              <option>Sede San Isidro</option>
+              <option>Sede Miraflores</option>
+            </select>
+            <input type="text" id="nombre" placeholder="Nombre" />
+            <button class="search-btn">Buscar</button>
+          </div>
+        </div>
+
+        <!-- Doctors Grid -->
+        <div class="doctors-grid">
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <img src="https://images.unsplash.com/photo-1594824475863-15c4e2245e2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Dra. Fabiola Teishi" />
+            </div>
+            <h4 class="doctor-name">Fabiola teishi</h4>
+            <p class="doctor-specialty">Indicar Especialidad</p>
+            <button class="doctor-action">Separar Cita</button>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Dra. Ericka García Francis" />
+            </div>
+            <h4 class="doctor-name">Ericka García Francis</h4>
+            <p class="doctor-specialty">Indicar Especialidad</p>
+            <button class="doctor-action">Separar Cita</button>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Dr. Luis Torres Taglia" />
+            </div>
+            <h4 class="doctor-name">Luis Torres Taglia</h4>
+            <p class="doctor-specialty">Indicar Especialidad</p>
+            <button class="doctor-action">Separar Cita</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="facilities-section" id="instalaciones">
+      <div class="facilities-container">
+        <h2 class="facilities-title">Instalaciones</h2>
+        
+        <div class="facilities-grid">
+          <div class="facility-item large">
+            foto de<br>instalaciones
+          </div>
+          <div class="facility-item medium">
+            foto de<br>instalaciones
+          </div>
+          <div class="facility-item medium">
+            foto de<br>instalaciones
+          </div>
+        </div>
+
+        <div class="facility-bottom-row">
+          <div class="facility-bottom-item">
+            foto de<br>instalaciones
+          </div>
+          <div class="facility-bottom-item">
+            foto de<br>instalaciones
+          </div>
+          <div class="facility-bottom-item">
+            foto de<br>instalaciones
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment-section" id="cita">
+      <div class="appointment-container">
+        <div class="appointment-content">
+          <h2 class="appointment-title">Reserva una cita con nosotros</h2>
+          <p class="appointment-description">
+            Completa el formulario y un especialista se contactará contigo.
+          </p>
+          <p class="appointment-details">
+            También puedes agendar una cita llamando al<br>
+            <strong>(+51) 953 959 720</strong> o enviando un mensaje a<br>
+            nuestro WhatsApp.
+          </p>
+          <button class="appointment-btn">Reservar ahora</button>
+        </div>
+        
+        <div class="appointment-image">
+          <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Equipo médico profesional" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileToggle.classList.toggle('active');
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('transparent');
+      } else {
+        navbar.classList.remove('transparent');
+      }
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (link.getAttribute('href').startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(link.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+
+    // Search functionality (basic)
+    document.querySelector('.search-btn').addEventListener('click', () => {
+      const sede = document.getElementById('sede').value;
+      const nombre = document.getElementById('nombre').value;
+      
+      // Filter doctors based on search criteria
+      const doctorCards = document.querySelectorAll('.doctor-card');
+      doctorCards.forEach(card => {
+        const doctorName = card.querySelector('.doctor-name').textContent.toLowerCase();
+        const matches = nombre === '' || doctorName.includes(nombre.toLowerCase());
+        card.style.display = matches ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
