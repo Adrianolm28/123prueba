@@ -1,0 +1,597 @@
+:root {
+            --primary-beige: #d4b896;
+            --primary-light-beige: #e6d3b7;
+            --primary-dark-beige: #c2a373;
+            --accent-brown: #8b6f47;
+            --text-dark: #2c2c2c;
+            --text-light: #958b8b;
+            --white: #ffffff;
+            --bg-cream-1: #f0ca8c;
+            --bg-cream-2: #f0eae0;
+            --bg-cream-3: #ede6db;
+            --font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            --font-weight-bold: 700;
+            --font-weight-medium: 500;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 0.75rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-xxl: 3rem;
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 20px;
+            --border-radius-xl: 50px;
+            --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+            --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-light);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .logo-link {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--text-dark);
+            text-decoration: none;
+            letter-spacing: 3px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: var(--font-weight-medium);
+            font-size: 0.9rem;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-dark-beige);
+            background: rgba(212, 184, 150, 0.15);
+        }
+
+        .tienda-btn {
+            background: var(--primary-beige);
+            color: var(--text-dark);
+            border-radius: var(--border-radius-xl);
+            padding: var(--spacing-sm) var(--spacing-md);
+            font-weight: var(--font-weight-bold);
+            border: 2px solid var(--primary-beige);
+        }
+
+        /* Hero Section */
+        .services-hero {
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+            z-index: 1;
+        }
+
+        .hero-services-content {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: var(--spacing-xxl);
+            border-radius: var(--border-radius-lg);
+            margin: var(--spacing-xxl);
+            max-width: 500px;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .services-badge {
+            display: inline-block;
+            background: var(--primary-beige);
+            color: var(--text-dark);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--border-radius-xl);
+            font-weight: var(--font-weight-bold);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-services-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        /* Sección Nuestros Servicios */
+        .our-services-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--white);
+        }
+
+        .our-services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .our-services-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xxl);
+            align-items: center;
+        }
+
+        .services-text-content {
+            background: #EAE6DE;
+            padding: var(--spacing-xxl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-light);
+        }
+
+        .services-section-title {
+            font-size: 2.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--accent-brown);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.2;
+        }
+
+        .services-section-description {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .services-image-content {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .services-content-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Sección de Tratamientos */
+        .treatments-section {
+            padding: var(--spacing-xxl) 0;
+            background: linear-gradient(to bottom, #f8f5f0 0%, var(--white) 30%);
+        }
+
+        .treatments-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .treatments-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-dark-beige);
+            margin-bottom: var(--spacing-xxl);
+        }
+
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xxl);
+        }
+
+        .treatment-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s ease;
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .treatment-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .treatment-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .treatment-content {
+            padding: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .treatment-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto var(--spacing-md);
+            color: var(--primary-beige);
+        }
+
+        .treatment-name {
+            font-size: 1.2rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .treatment-description {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .treatment-btn {
+            display: inline-block;
+            background: var(--primary-beige);
+            color: var(--text-dark);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--border-radius-xl);
+            text-decoration: none;
+            font-weight: var(--font-weight-medium);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .treatment-btn:hover {
+            background: var(--primary-dark-beige);
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        /* Sección BARIESTHETIC */
+        .bariesthetic-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--white);
+        }
+
+        .bariesthetic-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+            text-align: center;
+        }
+
+        .bariesthetic-title {
+            font-size: 2.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-dark-beige);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .bariesthetic-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: var(--spacing-xxl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bariesthetic-treatments {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xxl);
+        }
+
+        .bariesthetic-card {
+            text-align: center;
+        }
+
+        .bariesthetic-img-container {
+            margin-bottom: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .bariesthetic-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .bariesthetic-name {
+            font-size: 1.3rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .bariesthetic-description {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .see-all-btn {
+            display: inline-block;
+            background: var(--primary-beige);
+            color: var(--text-dark);
+            padding: var(--spacing-md) var(--spacing-xxl);
+            border-radius: var(--border-radius-xl);
+            text-decoration: none;
+            font-weight: var(--font-weight-medium);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-light);
+        }
+
+        .see-all-btn:hover {
+            background: var(--primary-dark-beige);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            text-decoration: none;
+        }
+
+        /* Sección de Promociones */
+        .promotions-section {
+            padding: var(--spacing-xxl) 0;
+            background: linear-gradient(to bottom, #f8f5f0 0%, var(--white) 30%);
+        }
+
+        .promotions-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .promotions-title {
+            text-align: left;
+            font-size: 2.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-dark-beige);
+            margin-bottom: var(--spacing-xxl);
+        }
+
+        .promotions-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 280px 280px;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .promotion-card {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .promotion-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .promo-small {
+            background: var(--primary-beige);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .promo-large {
+            grid-column: 2;
+            grid-row: 1 / -1;
+            background: linear-gradient(135deg, var(--bg-cream-2) 0%, var(--bg-cream-1) 100%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Sección de Reservar Cita */
+        .appointment-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--white);
+        }
+
+        .appointment-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .appointment-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .appointment-info-shape {
+            background: #E5E5E5;
+            padding: var(--spacing-xxl);
+            border-radius: 60px 20px 50px 30px;
+            clip-path: polygon(0% 20%, 15% 0%, 85% 0%, 100% 15%, 100% 80%, 90% 100%, 20% 100%, 0% 85%);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .appointment-title {
+            font-size: 2.2rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-dark-beige);
+            line-height: 1.2;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .appointment-description {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .appointment-contact {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .appointment-contact strong {
+            color: var(--text-dark);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .btn-appointment {
+            display: inline-block;
+            padding: var(--spacing-md) var(--spacing-xl);
+            background-color: #4A6FA5;
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--border-radius-xl);
+            font-weight: var(--font-weight-medium);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-light);
+        }
+
+        .btn-appointment:hover {
+            background-color: #3A5A95;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .appointment-image-shape {
+            background: #EAE6DE;
+            padding: var(--spacing-lg);
+            border-radius: 30px 50px 20px 60px;
+            clip-path: polygon(10% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%, 0% 30%);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .appointment-professionals-img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-lg);
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .our-services-content,
+            .appointment-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+
+            .treatments-grid,
+            .bariesthetic-treatments {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+
+            .promotions-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: var(--spacing-md);
+            }
+
+            .promo-large {
+                grid-column: 1;
+                grid-row: auto;
+                order: -1;
+            }
+
+            .services-text-content,
+            .appointment-info-shape {
+                padding: var(--spacing-xl);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-hero {
+                height: 70vh;
+            }
+
+            .hero-services-content {
+                margin: var(--spacing-lg);
+                padding: var(--spacing-lg);
+            }
+
+            .treatments-title,
+            .bariesthetic-title,
+            .promotions-title {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .services-section-title,
+            .appointment-title {
+                font-size: 1.8rem;
+            }
+        }
